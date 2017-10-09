@@ -1,5 +1,8 @@
+/* eslint-disable no-console */
+
 import express from 'express';
 import bodyParser from 'body-parser';
+import './config/db';
 
 const app = express();
 

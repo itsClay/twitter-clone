@@ -16,8 +16,8 @@ try {
   });
 }
 
-mongoose.createConnection
+mongoose.connection
   .once('open', () => console.log('MongoDB Running'))
-  .on('error', (err) => {
-    throw err;
+  .on('error', e => {
+    throw e;
   });
