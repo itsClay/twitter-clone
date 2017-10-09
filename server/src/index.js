@@ -10,6 +10,7 @@ import './config/db';
 import constants from './config/constants';
 import typeDefs from './graphql/schema';
 import resolvers from './graphql/resolvers/index';
+import mocks from './mocks/index';
 
 const app = express();
 
@@ -32,11 +33,14 @@ const graphQLServer = createServer(app);
 
 // applies middleware
 
+mocks().then( () => {
+  
+  graphQLServer.listen(constants.PORT, err => {
+    if(err) {
+      console.error(err);
+    } else {
+      console.log(`app listen on port: ${constants.PORT}`);
+    }
+  });
 
-graphQLServer.listen(constants.PORT, err => {
-  if(err) {
-    console.error(err);
-  } else {
-    console.log(`app listen on port: ${constants.PORT}`);
-  }
 });
