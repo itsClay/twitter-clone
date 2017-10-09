@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "cross-env NODE_ENV=dev nodemon --exec babel-node src/index.js",
-    "prettier": "prettier --single-quote --print-width 80 --trailing-comma all --write 'src/**/*.js'"
+    "dev": "cross-env NODE_ENV=dev nodemon --exec babel-node src/index.js"
   },
   "keywords": [],
   "author": "",
@@ -21,9 +20,6 @@
     "babel-cli": "^6.26.0",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-env": "^1.6.0",
-    "eslint": "^4.8.0",
-    "eslint-config-equimper": "^2.2.1",
-    "eslint-config-prettier": "^2.6.0",
     "nodemon": "^1.12.1",
     "prettier": "^1.7.4"
   }
